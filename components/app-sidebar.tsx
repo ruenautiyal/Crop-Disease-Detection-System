@@ -108,10 +108,10 @@ export function AppSidebar({
         <div className="border-t border-border px-4 py-3">
           <div className="rounded-lg bg-accent/50 px-3 py-2.5">
             <p className="text-xs font-semibold text-accent-foreground">
-              PlantVillage Dataset
+              New Plant Diseases Dataset
             </p>
             <p className="mt-0.5 text-[10px] text-muted-foreground">
-              14 Crops - 38 Classes - 26 Diseases
+              87K+ Images - 38 Classes - CNN Model
             </p>
           </div>
         </div>

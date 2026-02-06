@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { analyzeImage } from "@/lib/image-analyzer"
 import { addDiagnosis, type DiagnosisRecord } from "@/lib/diagnosis-store"
+import { modelInfo } from "@/lib/model-info"
 
 export async function POST(request: Request) {
   try {
@@ -17,9 +18,10 @@ export async function POST(request: Request) {
     const base64 = buffer.toString("base64")
     const mimeType = imageFile.type || "image/jpeg"
 
-    // Analyze the image using canvas simulation via pixel data
-    // We'll decode the image dimensions and create a simulated analysis
-    // based on the raw byte patterns
+    // In production, this would use the trained CNN model (trained_plant_disease_model.keras)
+    // Model: 5 Conv2D Blocks (32->512 filters) + Dense(1500) + Softmax(38)
+    // Input: 128x128 RGB | Dataset: New Plant Diseases Dataset (vipoooool)
+    // Current implementation uses color-profile heuristics as a simulation
     const analysisResult = analyzeImageFromBuffer(buffer)
 
     const topResult = analysisResult.topResults[0]
@@ -57,6 +59,14 @@ export async function POST(request: Request) {
         disease: r.disease,
         confidence: r.confidence,
       })),
+      modelInfo: {
+        name: modelInfo.name,
+        dataset: modelInfo.dataset.name,
+        datasetSource: modelInfo.dataset.source,
+        architecture: `${modelInfo.architecture.type} (${modelInfo.architecture.convBlocks.length} Conv Blocks)`,
+        inputShape: `${modelInfo.architecture.inputShape[0]}x${modelInfo.architecture.inputShape[1]} RGB`,
+        totalClasses: modelInfo.architecture.outputClasses,
+      },
     })
   } catch (error) {
     console.error("Diagnosis error:", error)

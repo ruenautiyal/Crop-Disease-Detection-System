@@ -105,7 +105,7 @@ export default function StatisticsPage() {
         {/* Dataset Overview Stats */}
         <div className="mb-8">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            PlantVillage Dataset Overview
+            New Plant Diseases Dataset Overview
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card>

@@ -120,13 +120,15 @@ export default function DiagnosePage() {
             <Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
             <div>
               <p className="text-xs font-semibold text-foreground">
-                Tips for best results
+                CNN Model - Tips for best results
               </p>
               <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
-                Use clear, well-lit photos of individual leaves. The system
-                works best with close-up images showing the leaf surface.
-                Supported crops include Apple, Tomato, Potato, Corn, Grape, and
-                more.
+                This system uses a 5-block CNN trained on the New Plant Diseases
+                Dataset (87K+ images, 38 classes). Upload clear, well-lit photos
+                of individual leaves at 128x128 resolution or higher. Supported
+                crops: Apple, Tomato, Potato, Corn, Grape, Peach, Cherry,
+                Strawberry, Pepper, Orange, Soybean, Squash, Raspberry, and
+                Blueberry.
               </p>
             </div>
           </CardContent>

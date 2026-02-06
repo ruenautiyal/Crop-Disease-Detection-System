@@ -1,6 +1,7 @@
-// PlantVillage Dataset - Complete Disease Database
-// Dataset: https://www.kaggle.com/datasets/emmarex/plantdisease
+// New Plant Diseases Dataset - Complete Disease Database
+// Dataset: https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
 // 14 Crops, 38 Classes (26 diseases + 12 healthy)
+// CNN Model: 5 Conv Blocks, Input 128x128 RGB, trained with Adam optimizer (lr=0.0001)
 
 export interface DiseaseInfo {
   id: string

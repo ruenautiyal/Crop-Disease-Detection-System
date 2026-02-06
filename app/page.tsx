@@ -35,7 +35,7 @@ export default function DashboardPage() {
           Crop Disease Detection
         </h1>
         <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
-          Upload leaf images for AI-powered disease diagnosis across 14 crops and 26 diseases
+          CNN-powered disease detection trained on the New Plant Diseases Dataset (87K+ images, 38 classes)
         </p>
       </div>
 

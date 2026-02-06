@@ -1,6 +1,9 @@
 // Image analysis engine for crop disease detection
-// Analyzes uploaded leaf images using pixel-level color distribution analysis
-// to classify plant diseases based on the PlantVillage dataset categories
+// Based on CNN model trained on New Plant Diseases Dataset (Kaggle: vipoooool/new-plant-diseases-dataset)
+// Model Architecture: 5 Conv2D Blocks (32->64->128->256->512 filters), Dense(1500), Softmax(38)
+// Input: 128x128 RGB images | Optimizer: Adam (lr=0.0001) | Loss: categorical_crossentropy
+// This web implementation uses color-profile heuristics to simulate classification
+// For production use, load the trained_plant_disease_model.keras via TensorFlow.js or API
 
 import { diseases, type DiseaseInfo } from "./disease-database"
 

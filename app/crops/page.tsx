@@ -310,8 +310,8 @@ export default function CropsPage() {
             Crop Library
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Browse all 14 crops and 38 disease classes from the PlantVillage
-            dataset
+            Browse all 14 crops and 38 disease classes from the New Plant
+            Diseases Dataset
           </p>
         </div>
 

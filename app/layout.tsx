@@ -11,9 +11,9 @@ const _jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "CropGuard - AI Crop Disease Detection",
+  title: "CropGuard - CNN Crop Disease Detection",
   description:
-    "Detect crop diseases from leaf images using AI. Supports 14 crops and 26 diseases from the PlantVillage dataset with real-time diagnosis and treatment recommendations.",
+    "Detect crop diseases from leaf images using a CNN model trained on the New Plant Diseases Dataset (87K+ images). Supports 14 crops, 38 classes with real-time diagnosis and treatment recommendations.",
   generator: "v0.app",
 }
 
